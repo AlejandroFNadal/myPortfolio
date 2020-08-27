@@ -1,11 +1,7 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container'
 import logo from '../im2.jpg';
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {FaGithub, FaLinkedin} from "react-icons/fa"
-//import {faGithub} from '@fortawesome/free-brands-svg-icons'
-//library.add(faGithub)
 class Me extends React.Component{
     render(){
         return(
