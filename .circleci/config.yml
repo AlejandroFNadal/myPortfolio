@@ -13,7 +13,7 @@ jobs:
           command: npm install
       - run:
           name: Building project
-          command: CI=false npm run build
+          command: 'CI=false npm run build'
       - persist_to_workspace:
           root: .
           paths:
@@ -40,7 +40,6 @@ workflows:
       - deploy_project:
           requires:
             - build_project
-          context: aws-context
           filters:
             branches:
               only:
