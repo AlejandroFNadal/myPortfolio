@@ -27,7 +27,7 @@ jobs:
           profile-name: default
       - run:
           name: Upload file to S3
-          command: aws s3 sync ./build s3://wwww.alejandronadal.com --delete
+          command: aws s3 sync ./build s3://www.alejandronadal.com --delete
 workflows:
   version: 2
   build:
