@@ -4,6 +4,7 @@
   background-color: rgb(9, 2, 14);
   background-image: linear-gradient(black,rgb(4, 4, 83));
   height:100%;
+  width:100%;
   position:absolute;
   color:white;
 }
@@ -19,8 +20,8 @@
     margin-left:10%;
     margin-top:5%;
   }
-.App-header {
-  /* background-color: #282c34; */
+/*.App-header {
+  background-color: #282c34; 
   min-height: 50%;
   display: flex;
   flex-direction: column;
@@ -28,7 +29,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
+}*/
 .App-link {
   color: #61dafb;
 }
@@ -36,6 +37,7 @@
   background-color: rgb(93, 105, 209);
   align-items: center;
   padding: 1%;
+  min-width: 50%;
 }
 .navlink{
   padding-left:4%;
@@ -80,4 +82,21 @@
 }
 .SocialMedia{
   padding:1%;
+}
+
+/*Education*/
+
+.Education{
+  background-color: rgb(38, 84, 145);
+  display: flex;
+  width: 80%;
+  margin-left:auto;
+  margin-right: auto;
+  margin-top:5%;
+  border-radius: 10px;
+}
+
+.Education .title{
+  margin-left:auto;
+  margin-right: auto;
 }

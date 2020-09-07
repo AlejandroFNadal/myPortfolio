@@ -2,14 +2,11 @@ import React from 'react';
 import Container from 'react-bootstrap/Container'
 import logo from '../im2.jpg';
 import {FaGithub, FaLinkedin} from "react-icons/fa"
-import { Helmet } from 'react-helmet'
+
 class Me extends React.Component{
     render(){
         return(
             <div>
-                <Helmet>
-                    <title>Alejandro Nadal</title>
-                </Helmet>
                 <Container className="Me">
                     <div className="NameandPic">
                         <img src={logo} className="App-logo" alt="logo" />
