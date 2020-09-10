@@ -88,15 +88,46 @@
 
 .Education{
   background-color: rgb(38, 84, 145);
-  display: flex;
+  display: grid;
   width: 80%;
   margin-left:auto;
   margin-right: auto;
   margin-top:5%;
   border-radius: 10px;
+  margin-bottom: 2%;
+  padding-bottom: 2%;
 }
 
 .Education .title{
   margin-left:auto;
   margin-right: auto;
+}
+.EducacionHr{
+  width:80%;
+  margin-top:0.5em;
+  margin-bottom: 0.5em;
+  border-width: 0.1px;
+  color:darkgrey;
+}
+.PicAndImage{
+  display: flex;
+  
+} 
+.PicInPicAndImage{
+  width: 5em;
+  height:5em;
+  
+}
+.eduSection{
+  width:100%;
+  display: flex;
+  justify-content: space-evenly;
+  
+  background-color: blueviolet;
+  
+}
+.eduTitle{
+  background-color: green;
+  vertical-align: top;
+  margin-top:0px;
 }
