@@ -2,11 +2,13 @@
 .App {
   text-align: center;
   background-color: rgb(9, 2, 14);
-  background-image: linear-gradient(black,rgb(4, 4, 83));
-  height:100%;
+  /* background-image: linear-gradient(black,rgb(4, 4, 83)); */
+  /* background-image: url(./night-sky.jpeg); */
+  /*height:100%;*/
   width:100%;
   position:absolute;
   color:white;
+  
 }
 
 .App-logo {
@@ -59,6 +61,7 @@
   margin-right: auto;
   margin-top:5%;
   border-radius: 10px;
+  margin-bottom:1em;
 }
 .MyAbstract{
   width:50%;
@@ -94,7 +97,7 @@
   margin-right: auto;
   margin-top:5%;
   border-radius: 10px;
-  margin-bottom: 2%;
+  /* margin-bottom: 2%; */
   padding-bottom: 2%;
 }
 
@@ -103,7 +106,7 @@
   margin-right: auto;
 }
 .EducacionHr{
-  width:80%;
+  width:90%;
   margin-top:0.5em;
   margin-bottom: 0.5em;
   border-width: 0.1px;
@@ -111,11 +114,15 @@
 }
 .PicAndImage{
   display: flex;
-  
+  width: 80%;
+  margin:auto;
+  padding:1em;
 } 
 .PicInPicAndImage{
   width: 5em;
-  height:5em;
+  height:6em;
+  margin:auto;
+  border-radius: 4px;
   
 }
 .eduSection{
@@ -123,11 +130,13 @@
   display: flex;
   justify-content: space-evenly;
   
-  background-color: blueviolet;
   
 }
 .eduTitle{
-  background-color: green;
   vertical-align: top;
   margin-top:0px;
+}
+.eduDesc{
+  text-align: left;
+  padding:1em;
 }
