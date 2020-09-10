@@ -3,8 +3,8 @@
   text-align: center;
   background-color: rgb(9, 2, 14);
   /* background-image: linear-gradient(black,rgb(4, 4, 83)); */
-  /* background-image: url(./night-sky.jpeg); */
-  /*height:100%;*/
+  background-image: url(./night-sky.jpeg);
+  height:100%;
   width:100%;
   position:absolute;
   color:white;
