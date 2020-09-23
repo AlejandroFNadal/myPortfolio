@@ -35,6 +35,9 @@ class Portfolio extends React.Component{
                             </Carousel.Caption>
                         </Carousel.Item>
                     </Carousel>
+                    <div className="mostProjects">
+                    </div>
+
                 </Container>
             </div>
         )
