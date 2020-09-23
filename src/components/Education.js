@@ -9,7 +9,7 @@ class Education extends React.Component{
        return(
             <div>
                 <Container className="Education">
-                    <h1 className="title">Education</h1>
+                    <h1 className="E-title">Education</h1>
                     
                     <PicAndImage
                         imag={utnLogo}

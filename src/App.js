@@ -1,6 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import './fonts/Roboto/Roboto-Regular.ttf'
 
 import Header from './components/Header'
 import Me from './components/Me'
