@@ -2,6 +2,9 @@
   font-family: 'Roboto-Regular';
   src:local('Roboto-Regular'),url(./fonts/Roboto/Roboto-Regular.ttf) format('truetype');
 }
+body{
+  background-image: url(./night-sky.jpg);
+}
 .App {
   text-align: center;
   background-color: rgb(9, 2, 14);
@@ -183,4 +186,36 @@
 .Portfolio{
   background-color: rgb(2, 2, 34);
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+.title{
+  margin:1%;
+  padding:1%;
+}
+.P-Card{
+  color:black;
+}
+@media only screen and (min-width: 771px){
+  .P-twoBlock{
+    display:flex;
+    margin:auto;
+    justify-content: center;
+    flex-wrap:wrap;
+  }
+  .P-Card{
+    width:33%;
+    margin: 3%;
+  }
+}
+@media only screen and (max-width:771px)
+{
+  .P-Card{
+    margin:auto;
+    width:55%;
+  }
+}
+
+.CardButton{
+  width:60%;
 }

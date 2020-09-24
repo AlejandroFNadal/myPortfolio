@@ -1,8 +1,9 @@
 import React from 'react';
-import { Carousel, Container } from 'react-bootstrap';
+import { Button, Card, Carousel, Container } from 'react-bootstrap';
 import lagrange from '../Lagrange.png'
 import minSalud from '../MinisterioSalud.png'
 import '../fonts/Roboto/Roboto-Regular.ttf'
+import holder from 'holderjs'
 class Portfolio extends React.Component{
     render(){
         return(
@@ -36,6 +37,31 @@ class Portfolio extends React.Component{
                         </Carousel.Item>
                     </Carousel>
                     <div className="mostProjects">
+                        <h2 className="title"> Some other things I am working on</h2>
+                        <div className="P-twoBlock">
+                            <Card className="P-Card">
+                            <Card.Img variant="top" src="holder.js/100px300" /> 
+                                <Card.Body>
+                                    <Card.Title>Card Title</Card.Title>
+                                    <Card.Text>
+                                    Some quick example text to build on the card title and make up the bulk of
+                                    the card's content.
+                                    </Card.Text>
+                                    <Button className = "CardButton" variant="primary">Go somewhere</Button>
+                                </Card.Body>
+                            </Card>
+                            <Card className="P-Card">
+                            <Card.Img variant="top" src="holder.js/100px300" /> 
+                                <Card.Body>
+                                    <Card.Title>Card Title</Card.Title>
+                                    <Card.Text>
+                                    Some quick example text to build on the card title and make up the bulk of
+                                    the card's content.
+                                    </Card.Text>
+                                    <Button className = "CardButton" variant="primary">Go somewhere</Button>
+                                </Card.Body>
+                            </Card>
+                        </div>
                     </div>
 
                 </Container>
