@@ -10,6 +10,9 @@ import {NavLink} from 'react-router-dom'
 import Education from './components/Education'
 import { Helmet } from 'react-helmet'
 import Portfolio from './components/Portfolio'
+import LogisticMap from './components/LogisticMap'
+
+
 function App() {
   return (
     <div className="App">
@@ -27,6 +30,9 @@ function App() {
           </Route>
           <Route path="/portfolio">
             <Portfolio />
+          </Route>
+          <Route path="/logisticMap">
+            <LogisticMap />
           </Route>
         </Switch>
       </BrowserRouter>
