@@ -95,7 +95,7 @@ h3{
   color: #61dafb;
 }
 .Mynavbar{
-  background-color: rgb(93, 105, 209);
+  background-color: rgb(38, 84, 145);
   align-items: center;
   padding-top: 1%;
   padding-bottom: 1%;
@@ -158,10 +158,35 @@ h3{
 
 
 /*Education*/
+@media only screen and (max-width:670px){
+#Education{
+    display:block;
+  }
+  .PicAndImage{
+    display: flex;
+
+  }
+}
+@media only screen and (min-width:670px){
+  #Education{
+      display:grid;
+    }
+    .PicAndImage{
+      display: flex;
+    }
+    .eduSection{
+      width:100%;
+      display: flex;
+      justify-content: space-evenly;
+      
+      
+    }
+  }
+
 
 #Education{
   background-color: rgb(38, 84, 145);
-  display: grid;
+  
   width: 80%;
   margin-left:auto;
   margin-right: auto;
@@ -190,8 +215,8 @@ h3{
   padding:1em;
 } 
 .left-pic-pic-image{
-  width: 30%;
-  height:80%;
+  width: 7em;
+  height:5em;
   margin-left:auto;
   margin-right:auto;
   border-radius: 4px;
@@ -200,20 +225,14 @@ h3{
 }
 .right-pic-pic-image{
   
-    width: 30%;
-    height:90%;
+    width: 7em;
+    height:5em;
     margin-left:auto;
     margin-right:auto;
     border-radius: 4px;
     padding-left: 3%;
 }
-.eduSection{
-  width:100%;
-  display: flex;
-  justify-content: space-evenly;
-  
-  
-}
+
 .eduTitle{
   vertical-align: top;
   margin-top:0px;

@@ -24,7 +24,9 @@ class Me extends React.Component{
                             <a href="https://github.com/AlejandroFNadal">
                                 <FaGithub className="GitLogo" size={25} color="black"/>
                             </a>
-                            <FaLinkedin className="LinkedinLogo"size={25} color = "black"/>
+                            <a href ="https://linkedin.com/in/alejandro-nadal/">
+                                <FaLinkedin className="LinkedinLogo"size={25} color = "black"/>
+                            </a>
                         </div>
                     </div>
                     
