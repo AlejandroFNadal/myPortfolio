@@ -28,6 +28,15 @@ h3{
 
 /*About Me */
 
+#my-abstract{
+  width:75%;
+  margin-left:3em;
+  margin-right:2em;
+  margin-top:5%;
+  font-size: 110%;
+  text-align: left;
+  
+}
 @media only screen and (min-width: 670px){
   /*PC*/
   .Me{
@@ -47,6 +56,16 @@ h3{
   }
   #my-name{
     font-size:2em
+  }
+  #my-abstract{
+    width:90%;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:1em;
+  }
+  #me-about-me{
+    margin-top:0;
+    
   }
 }
 .my-image {
@@ -102,10 +121,10 @@ h3{
 .navlink:hover{
   background-color: steelblue;
   border-radius: 10px;
+  text-decoration: none;
 }
 .Me{
   background-color: rgb(38, 84, 145);
-  /* display: flex; */
   width: 80%;
   margin-left:auto;
   margin-right: auto;
@@ -116,15 +135,7 @@ h3{
   padding-bottom: 1em;
 
 }
-.MyAbstract{
-  width:75%;
-  margin-left:3em;
-  margin-right:2em;
-  margin-top:5%;
-  font-size: 110%;
-  text-align: left;
-  
-}
+
 .LinkedinLogo{
   padding-left:2%;
   padding-right:2%;
@@ -144,13 +155,11 @@ h3{
 .SocialMedia{
   padding:1%;
 }
-.my-name{
-  font-size:2em;
-}
+
 
 /*Education*/
 
-.Education{
+#Education{
   background-color: rgb(38, 84, 145);
   display: grid;
   width: 80%;
@@ -162,7 +171,7 @@ h3{
   padding-bottom: 2%;
 }
 
-.Education .E-title{
+#Education #edu-title{
   margin-left:auto;
   margin-right: auto;
   margin-top:1em;
@@ -180,12 +189,23 @@ h3{
   margin:auto;
   padding:1em;
 } 
-.PicInPicAndImage{
-  width: 5em;
-  height:6em;
-  margin:auto;
+.left-pic-pic-image{
+  width: 30%;
+  height:80%;
+  margin-left:auto;
+  margin-right:auto;
   border-radius: 4px;
+  padding-right: 3%;
   
+}
+.right-pic-pic-image{
+  
+    width: 30%;
+    height:90%;
+    margin-left:auto;
+    margin-right:auto;
+    border-radius: 4px;
+    padding-left: 3%;
 }
 .eduSection{
   width:100%;
@@ -204,6 +224,7 @@ h3{
 }
 
 /*Portfolio*/
+
 .favProjImg{
   width:30%;
   height:10%;
@@ -213,11 +234,16 @@ h3{
   left:0;
   top:0;
 }
-.P-Title{
+#p-title{
 
   
   margin-top:1em;
   padding-top: 1em;
+  margin-bottom:1em;
+  
+}
+#fav-proj-title{
+  margin-bottom:1em;
 }
 .Portfolio{
   background-color: rgb(38, 84, 145);

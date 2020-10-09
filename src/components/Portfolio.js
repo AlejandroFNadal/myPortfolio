@@ -9,9 +9,9 @@ class Portfolio extends React.Component{
         return(
             <div>
                 <Container className="Portfolio">
-                    <h1 className="P-Title"> Portfolio</h1>
+                    <h1 id="p-title" className="title"> Portfolio</h1>
                     <hr />
-                    <h2>My favorites!</h2>
+                    <h2 id="fav-proj-title">My favorites!</h2>
                     <Carousel>
                         <Carousel.Item>
                             <img className= "favProjImg" src={lagrange}/>
@@ -36,6 +36,7 @@ class Portfolio extends React.Component{
                             </Carousel.Caption>
                         </Carousel.Item>
                     </Carousel>
+                    
                     <div className="mostProjects">
                         <h2 className="title"> Some other things I am working on</h2>
                         <div className="P-twoBlock">

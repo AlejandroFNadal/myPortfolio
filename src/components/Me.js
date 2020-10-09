@@ -14,9 +14,9 @@ class Me extends React.Component{
                             Alejandro Fabian Nadal
                         </h5>
                     </div>
-                    <div>
+                    <div id="me-about-me">
                         <h2 className="title" id="about-me-title">About me</h2>
-                        <p className='MyAbstract'>
+                        <p id='my-abstract'>
                             Information Systems Engineering student (4th year). Dedicated, passionate about Artificial Intelligence, Finance, IoT, and backends in general. I have received many scholarships, including Friends of Fulbright and Seeds For The Future Huawei. Excellent teamwork and communication skills. 
                         </p>
                         <div className="SocialMedia">
