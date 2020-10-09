@@ -9,13 +9,13 @@ class Me extends React.Component{
             <div>
                 <Container className="Me">
                     <div className="NameandPic">
-                        <img src={logo} className="App-logo" alt="logo" />
-                        <p className='MyName'>
+                        <img src={logo} className="my-image" alt="logo" />
+                        <h5 className='title' id="my-name">
                             Alejandro Fabian Nadal
-                        </p>
+                        </h5>
                     </div>
                     <div>
-                        <h2>About me</h2>
+                        <h2 className="title" id="about-me-title">About me</h2>
                         <p className='MyAbstract'>
                             Information Systems Engineering student (4th year). Dedicated, passionate about Artificial Intelligence, Finance, IoT, and backends in general. I have received many scholarships, including Friends of Fulbright and Seeds For The Future Huawei. Excellent teamwork and communication skills. 
                         </p>

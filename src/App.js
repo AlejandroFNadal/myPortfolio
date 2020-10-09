@@ -12,6 +12,13 @@ import { Helmet } from 'react-helmet'
 import Portfolio from './components/Portfolio'
 import LogisticMap from './components/LogisticMap'
 
+import WebFont from 'webfontloader'
+
+WebFont.load({
+  google:{
+    families:['Droid Serif', 'Droid Sans']
+  }
+});
 
 function App() {
   return (

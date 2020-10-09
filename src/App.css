@@ -1,11 +1,19 @@
-@font-face{
-  font-family: 'Roboto-Regular';
-  src:local('Roboto-Regular'),url(./fonts/Roboto/Roboto-Regular.ttf) format('truetype');
-}
+/*Generic Section*/
+
 body{
   /* background-image: url(./night-sky.jpg); */
   background-color: rgb(40, 28, 73);
+  font-family: 'Droid Sans'
 } 
+h2{
+  font-family: 'Droid Serif'
+}
+h3{
+  font-family: 'Droid Serif';
+}
+.title{
+  font-family: 'Droid Serif';
+}
 .App {
   text-align: center;
   /* background-color: rgb(9, 2, 14); */
@@ -18,12 +26,37 @@ body{
   
 }
 
-.App-logo {
-  height: 40vmin;
+/*About Me */
+
+@media only screen and (min-width: 670px){
+  /*PC*/
+  .Me{
+    display: flex;
+  }
+  
+}
+@media only screen and (max-width:670px)
+{
+  /*Phones*/
+  .NameandPic{
+    margin-left:2em;
+    margin-right: 2em;
+  }
+  #about-me-title{
+    visibility: hidden;
+  }
+  #my-name{
+    font-size:2em
+  }
+}
+.my-image {
+  height: 50vmin;
   pointer-events: none;
   border-radius: 5px;
 }
-
+#my-name{
+  margin-top:5%;
+}
 
   .NameandPic{
     margin-left:10%;
@@ -72,7 +105,7 @@ body{
 }
 .Me{
   background-color: rgb(38, 84, 145);
-  display: flex;
+  /* display: flex; */
   width: 80%;
   margin-left:auto;
   margin-right: auto;
@@ -84,13 +117,12 @@ body{
 
 }
 .MyAbstract{
-  width:50%;
-  margin-left:auto;
-  margin-right:auto;
+  width:75%;
+  margin-left:3em;
+  margin-right:2em;
   margin-top:5%;
   font-size: 110%;
   text-align: left;
-  font-family:
   
 }
 .LinkedinLogo{
@@ -111,6 +143,9 @@ body{
 }
 .SocialMedia{
   padding:1%;
+}
+.my-name{
+  font-size:2em;
 }
 
 /*Education*/
