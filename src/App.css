@@ -3,13 +3,14 @@
   src:local('Roboto-Regular'),url(./fonts/Roboto/Roboto-Regular.ttf) format('truetype');
 }
 body{
-  background-image: url(./night-sky.jpg);
-}
+  /* background-image: url(./night-sky.jpg); */
+  background-color: rgb(40, 28, 73);
+} 
 .App {
   text-align: center;
-  background-color: rgb(9, 2, 14);
+  /* background-color: rgb(9, 2, 14); */
   /* background-image: linear-gradient(black,rgb(4, 4, 83)); */
-  background-image: url(./night-sky.jpg);
+  /* background-image: url(./night-sky.jpg); */
   height:100%;
   width:100%;
   position:absolute;
@@ -70,7 +71,7 @@ body{
   border-radius: 10px;
 }
 .Me{
-  background-color: rgba(4, 43, 70, 0.972);
+  background-color: rgb(38, 84, 145);
   display: flex;
   width: 80%;
   margin-left:auto;
@@ -184,7 +185,7 @@ body{
   padding-top: 1em;
 }
 .Portfolio{
-  background-color: rgb(2, 2, 34);
+  background-color: rgb(38, 84, 145);
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
