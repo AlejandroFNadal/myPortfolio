@@ -13,6 +13,7 @@ h3{
 }
 .title{
   font-family: 'Droid Serif';
+  padding-top:2em;
 }
 .App {
   text-align: center;
@@ -163,15 +164,32 @@ h3{
   #Education{
       display:block;
   }
+  .left-pic-pic-image{
+    margin:2em;
+    height: 9em;
+    width: 9em;
+  }
+  .right-pic-pic-image{
+    margin:2em;
+    height: 9em;
+    width: 9em;
+  }
+  .PicAndImage{
+    margin:auto;
+  }
+  .eduSection-l{
+    margin:auto;
+  }
+
 }
 @media only screen and (min-width:670px){
   /*PC*/
-  #Education{
+  /* #Education{
       display:block;
     }
     .PicAndImage{
       display: block;
-    }
+    } */
     .eduSection-l{
       width:100%;
       display: flex;
@@ -184,8 +202,24 @@ h3{
       justify-content: space-evenly;
       flex-direction: row-reverse;
     }
+    
+    .left-pic-pic-image{
+      width: 7em;
+      height:5em;
+      margin-left:auto;
+      margin-right:auto;
+      border-radius: 4px;
+      padding-right: 3%;
+      
+    }
     .right-pic-pic-image{
-      padding-left: 3%;
+      
+        width: 7em;
+        height:5em;
+        margin-left:auto;
+        margin-right:auto;
+        border-radius: 4px;
+        padding-left: 3%;
     }
   }
 
@@ -200,6 +234,7 @@ h3{
   border-radius: 10px;
   /* margin-bottom: 2%; */
   padding-bottom: 2%;
+  padding-top:0.1%;
 }
 
 #Education #edu-title{
@@ -220,24 +255,7 @@ h3{
   margin:auto;
   padding:1em;
 } 
-.left-pic-pic-image{
-  width: 7em;
-  height:5em;
-  margin-left:auto;
-  margin-right:auto;
-  border-radius: 4px;
-  padding-right: 3%;
-  
-}
-.right-pic-pic-image{
-  
-    width: 7em;
-    height:5em;
-    margin-left:auto;
-    margin-right:auto;
-    border-radius: 4px;
-    
-}
+
 
 .eduTitle{
   vertical-align: top;
