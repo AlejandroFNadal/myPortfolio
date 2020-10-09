@@ -11,7 +11,7 @@ class PicAndImage extends React.Component{
                 <div>
                     <hr className="EducacionHr"/>
                     <Container className="PicAndImage">
-                        <div className="eduSection">
+                        <div className="eduSection-l">
                             <img src={this.props.imag} className="left-pic-pic-image"/>
                             <div className="TextInPicAndImage">
                                 <h3 className="eduTitle">{this.props.text}</h3>
@@ -28,12 +28,13 @@ class PicAndImage extends React.Component{
                 <div>
                     <hr className="EducacionHr"/>
                     <Container className="PicAndImage">
-                        <div className="eduSection">
+                        <div className="eduSection-r">
+                        <img src={this.props.imag} className="right-pic-pic-image"/>
                             <div className="TextInPicAndImage">
                                 <h3 className="eduTitle">{this.props.text}</h3>
                                 <p className="eduDesc">{this.props.desc}</p>
                             </div>
-                            <img src={this.props.imag} className="right-pic-pic-image"/>
+                            
                         </div>
                     </Container>
                 </div> 

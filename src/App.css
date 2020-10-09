@@ -159,27 +159,33 @@ h3{
 
 /*Education*/
 @media only screen and (max-width:670px){
-#Education{
-    display:block;
-  }
-  .PicAndImage{
-    display: flex;
-
+  /*telefonos*/
+  #Education{
+      display:block;
   }
 }
 @media only screen and (min-width:670px){
+  /*PC*/
   #Education{
-      display:grid;
+      display:block;
     }
     .PicAndImage{
-      display: flex;
+      display: block;
     }
-    .eduSection{
+    .eduSection-l{
       width:100%;
       display: flex;
       justify-content: space-evenly;
-      
-      
+      flex-direction: row;
+    }
+    .eduSection-r{
+      width:100%;
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: row-reverse;
+    }
+    .right-pic-pic-image{
+      padding-left: 3%;
     }
   }
 
@@ -230,7 +236,7 @@ h3{
     margin-left:auto;
     margin-right:auto;
     border-radius: 4px;
-    padding-left: 3%;
+    
 }
 
 .eduTitle{
