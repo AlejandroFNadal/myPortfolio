@@ -3,15 +3,15 @@ import Chart from 'chart.js';
 import {Line} from 'react-chartjs-2';
 
 
-function genValues(iterations, x_n, r,hlogMapArray, xlogMapArray){
-    if(iterations > 0)
+function genValues(iterations, t, x_n, r,hlogMapArray, xlogMapArray){
+    if(t < iterations)
     {
-        iterations-=1;
+        t+=1;
         x_n= r*x_n*(1-x_n);
         console.log(x_n)
-        xlogMapArray.push(100-iterations)
+        xlogMapArray.push(t)
         hlogMapArray.push(x_n)
-        return genValues(iterations,x_n,r,hlogMapArray,xlogMapArray);
+        return genValues(iterations,t,x_n,r,hlogMapArray,xlogMapArray);
     }
     
 }
@@ -59,9 +59,11 @@ class LogisticMap extends React.Component{
         this.setState({r:event.target.value})
         console.log(this.state.r)
         console.log(this.state.data.datasets[0].data)
-        genValues(100,0.7,this.state.r,this.state.data.datasets[0].data, this.state.data.labels)
+        genValues(this.state.iteration,0,0.7,this.state.r,this.state.data.datasets[0].data, this.state.data.labels)
     };
     handleIterationChange(event){
+        this.state.data.datasets[0].data=[]
+        this.state.data.labels=[]
         this.setState({iteration:event.target.value})
     }
    
@@ -79,7 +81,7 @@ class LogisticMap extends React.Component{
                         <div id="lm-parameter-selector">
                             <form>
                                 <label for="iterations">Iterations</label>
-                                <input type="text"></input><br/>
+                                <input type="text" value={this.state.iteration} onChange={this.handleIterationChange}></input><br/>
                                 <label for="r" > {this.state.r}</label>
                                 <input type="text" value={this.state.r} onChange={this.handleRChange}></input>
                             </form>
