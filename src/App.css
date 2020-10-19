@@ -324,3 +324,17 @@ h3{
 .CardButton{
   width:60%;
 }
+
+/*Logistic Map*/
+#lm-content{
+  display:flex;
+}
+
+#lm-graph{
+  width:60%;
+  margin:2em;
+}
+
+#lm-theory-selection{
+  width:50%;
+}
