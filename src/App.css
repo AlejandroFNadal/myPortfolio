@@ -271,6 +271,7 @@ h3{
 .favProjImg{
   width:30%;
   height:10%;
+  cursor:pointer;
 }
 .carousel-caption{
   position:relative;
@@ -292,6 +293,8 @@ h3{
   background-color: rgb(38, 84, 145);
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
+
 
 
 .title{

@@ -2,17 +2,35 @@ import React from 'react';
 import { Button, Card, Carousel, Container } from 'react-bootstrap';
 import lagrange from '../Lagrange.png'
 import minSalud from '../MinisterioSalud.png'
+import logMap from '../logMap.png'
 import '../fonts/Roboto/Roboto-Regular.ttf'
 import holder from 'holderjs'
-class Portfolio extends React.Component{
-    render(){
-        return(
+import {useHistory} from "react-router-dom"
+
+
+function Portfolio (){
+    const history = useHistory();
+    var handleClickOnLogMap = () =>{
+        history.push("/logisticMap")
+    }
+    return(
             <div>
                 <Container className="Portfolio">
                     <h1 id="p-title" className="title"> Portfolio</h1>
                     <hr />
                     <h2 id="fav-proj-title">My favorites!</h2>
                     <Carousel>
+                        <Carousel.Item onClick={handleClickOnLogMap}>
+                            <img className="favProjImg" src={logMap}/>
+                            <Carousel.Caption>
+                                <h3>
+                                    Population Growth Model - Logistic Map
+                                </h3>
+                                <p>
+                                    A simple graph program that shows the behaviour of a population size. It also displays chaotic behaviour.
+                                </p>
+                            </Carousel.Caption>
+                        </Carousel.Item>
                         <Carousel.Item>
                             <img className= "favProjImg" src={lagrange}/>
                             <Carousel.Caption>
@@ -36,8 +54,7 @@ class Portfolio extends React.Component{
                             </Carousel.Caption>
                         </Carousel.Item>
                     </Carousel>
-                    
-                    <div className="mostProjects">
+                    {/* <div className="mostProjects">
                         <h2 className="title"> Some other things I am working on</h2>
                         <div className="P-twoBlock">
                             <Card className="P-Card">
@@ -63,12 +80,11 @@ class Portfolio extends React.Component{
                                 </Card.Body>
                             </Card>
                         </div>
-                    </div>
-
+                    </div> */}
+            
                 </Container>
             </div>
         )
-    }
         
 }
 
