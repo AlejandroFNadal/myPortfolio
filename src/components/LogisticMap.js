@@ -73,23 +73,25 @@ class LogisticMap extends React.Component{
         console.log(this.state.x_n)
     };
     simulate(event){
-        this.state.data.datasets[0].data=[]
-        this.state.data.labels=[]
-        var values=genValues(this.state.iteration,0,this.state.x_n,this.state.r,this.state.data.datasets[0].data, this.state.data.labels)
-        var tempStateData = {...this.state.data}
-        console.log("tempStateData")
-        console.log(tempStateData)
-        console.log("values-0")
-        console.log(values[0])
-        tempStateData.datasets[0].data=values[0]
-        tempStateData.labels=values[1]
-        this.setState({data:tempStateData})
-        /*this.setState(prevState =>({
-            data:{
-                ...prevState.data,
-                datasets:[values[0]]
-            }
-        }))*/
+        if(this.state.r > 0 && this.state.r < 4 && this.state.x_n > 0 && this.state.x_n <1)
+        {
+            this.state.data.datasets[0].data=[]
+            this.state.data.labels=[]
+            var values=genValues(this.state.iteration,0,this.state.x_n,this.state.r,this.state.data.datasets[0].data, this.state.data.labels)
+            var tempStateData = {...this.state.data}
+            console.log("tempStateData")
+            console.log(tempStateData)
+            console.log("values-0")
+            console.log(values[0])
+            tempStateData.datasets[0].data=values[0]
+            tempStateData.labels=values[1]
+            this.setState({data:tempStateData})
+        }
+        else{
+            alert("X_n must be between 0 and 1, R must be between 0 and 4, iterations must be positive")
+        }
+        
+        
     };
     
     render(){
