@@ -32,7 +32,7 @@ class LogisticMap extends React.Component{
                 labels: [],
                 datasets:
                 [{
-                    label: 'Logistic Map',
+                    label: '% of maximum population',
                     fill: false,
                     lineTension: 0.1,
                     backgroundColor: 'rgba(75,192,192,0.4)',
@@ -73,18 +73,9 @@ class LogisticMap extends React.Component{
         console.log(this.state.x_n)
     };
     simulate(event){
-        console.log("Simulating")
         this.state.data.datasets[0].data=[]
         this.state.data.labels=[]
-        console.log("Before genValues")
-        console.log("r")
-        console.log(this.state.r)
-        console.log("iteration")
-        console.log(this.state.iteration)
-        console.log("x_n")
-        console.log(this.state.x_n)
         var values=genValues(this.state.iteration,0,this.state.x_n,this.state.r,this.state.data.datasets[0].data, this.state.data.labels)
-        let key = 0
         var tempStateData = {...this.state.data}
         console.log("tempStateData")
         console.log(tempStateData)
@@ -108,17 +99,17 @@ class LogisticMap extends React.Component{
                 <div id="lm-main">
                     <h1 className="title">Logistic Map</h1>
                     <div id="lm-content">
-                    <div id="lm-theory-selection">
-                        <div id="lm-definition">
-                            <p>A logistic map is a very simple recursive function that displays chaotic behaviour. It can be used to simulate, among other things, population growth.</p>
-                            <p>Let's assume the existence of a virus population, such as Covid19, with a certain reproduction rate R, meaning how many individuals will get the virus per each person currently sick. X_N is the percentage of the population currently sick.</p>
-                            <p>This is a terribly simple model and it does not take into account a huge number of factors. Lets consider some scenarios</p>
-                            <p> With an r lower than 1, the population dies. It may take more days if x_n is closer to the maximum 1, but it will still die. In the case of Covid-19, the r parameter can be kept down with preventive measures such as keeping distance from people, using masks, washing hands, etc</p>
-                            <p> If r is higher than 1, the population grows until its theorical maximum and it stays there. </p>
-                            <p> With certain values of r, the model exhibits chaotic behaviour. Try with r values in the range of 3.57--4</p>
+                        <div id="lm-theory-selection">
+                            <div id="lm-definition">
+                                <p>A logistic map is a very simple recursive function that displays chaotic behaviour. It can be used to simulate, among other things, population growth.</p>
+                                <p>Let's assume the existence of a virus population, such as Covid19, with a certain reproduction rate R, meaning how many individuals will get the virus per each person currently sick. X_N is the percentage of the population currently sick.</p>
+                                <p>This is a terribly simple model and it does not take into account a huge number of factors. Lets consider some scenarios</p>
+                                <p> With an r lower than 1, the population dies. It may take more days if x_n is closer to the maximum 1, but it will still die. In the case of Covid-19, the r parameter can be kept down with preventive measures such as keeping distance from people, using masks, washing hands, etc</p>
+                                <p> If r is higher than 1, the population grows until its theorical maximum and it stays there. </p>
+                                <p> With certain values of r, the model exhibits chaotic behaviour. Try with r values in the range of 3.57--4</p>
+                            </div>
+                            
                         </div>
-                        
-                    </div>
                     <div id="lm-graph">
                         <Line data={this.state.data}/>
                         <div id="lm-parameter-selector">
