@@ -103,7 +103,7 @@ class LogisticMap extends React.Component{
                     <div id="lm-content">
                         <div id="lm-theory-selection">
                             <div id="lm-definition">
-                                <p>A logistic map is a very simple recursive function that displays chaotic behaviour. It can be used to simulate, among other things, population growth.</p>
+                                <p>A logistic map is a very simple recursive function that can show chaotic behaviour. It can be used to simulate, among other things, population growth.[1]</p>
                                 <p>Let's assume the existence of a virus population, such as Covid19, with a certain reproduction rate R, meaning how many individuals will get the virus per each person currently sick. X_N is the percentage of the population currently sick.</p>
                                 <p>This is a terribly simple model and it does not take into account a huge number of factors. Lets consider some scenarios</p>
                                 <p> With an r lower than 1, the population dies. It may take more days if x_n is closer to the maximum 1, but it will still die. In the case of Covid-19, the r parameter can be kept down with preventive measures such as keeping distance from people, using masks, washing hands, etc</p>
@@ -112,29 +112,30 @@ class LogisticMap extends React.Component{
                             </div>
                             
                         </div>
-                    <div id="lm-graph">
-                        <Line data={this.state.data}/>
-                        <div id="lm-parameter-selector">
-                            <form>
-                                <div id="lm-labels">
-                                    <label className="lm-form-label" for="iterations">Days</label><br/>
-                                        <label className="lm-form-label" for="r" >R</label><br/>
-                                        <label className="lm-form-label" for="x_n">X_N</label>
-                                    </div>
-                                    <div id="lm-inputs">
-                                        <input type="number" value={this.state.iteration} onChange={this.handleIterationChange}></input><br/>
-                                        <input type="text" value={this.state.r} onChange={this.handleRChange}></input><br/>
-                                        <input type="text" value={this.state.x_n} onChange={this.handleX_NChange}></input>
-                                    </div>
-                                    
-                            </form>
+                        <div id="lm-graph">
+                            <Line data={this.state.data}/>
+                            <div id="lm-parameter-selector">
+                                <form>
+                                    <div id="lm-labels">
+                                        <label className="lm-form-label" for="iterations">Days</label><br/>
+                                            <label className="lm-form-label" for="r" >R</label><br/>
+                                            <label className="lm-form-label" for="x_n">X_N</label>
+                                        </div>
+                                        <div id="lm-inputs">
+                                            <input type="number" value={this.state.iteration} onChange={this.handleIterationChange}></input><br/>
+                                            <input type="text" value={this.state.r} onChange={this.handleRChange}></input><br/>
+                                            <input type="text" value={this.state.x_n} onChange={this.handleX_NChange}></input>
+                                        </div>
+                                        
+                                </form>
+                            </div>
+                            <button id="lm-button" onClick={this.simulate}>Simulate</button>
                         </div>
-                        <button id="lm-button" onClick={this.simulate}>Simulate</button>
-                   </div>
-                   
-                    
                     </div>
-                    
+                    <div id="lm-bibliography">
+                        <h4> References</h4>
+                        [1] Mitchell, M., 2011. Complexity. New York: Oxford University Press, p27-33
+                    </div>
                 </div>
             )
         }

@@ -400,3 +400,11 @@ h3{
   margin-top:1em;
   margin-bottom:1em;
 }
+#lm-bibliography{
+  margin:1em;
+  padding: 1em;
+}
+
+#lm-bibliography h4{
+  margin-bottom:1rem;
+}
