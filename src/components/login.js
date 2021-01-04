@@ -1,6 +1,6 @@
 import React from 'react'
 
-var back_url = 'localhost:5000/'
+var back_url = 'http://localhost:5000/'
 class Login extends React.Component{
     constructor(props){
         super(props);
@@ -11,23 +11,25 @@ class Login extends React.Component{
         }
         this.handleUsername=this.handleUsername.bind(this);
         this.handlePassword=this.handlePassword.bind(this);
-        this.handleLogin=this.handleLogin(this);
+        this.handleLogin=this.handleLogin.bind(this);
     }
     handleUsername(event){
         this.setState({username:event.target.value})
     }
     handlePassword(event){
-        this.setState({username:event.target.value})
+        this.setState({password:event.target.value})
     }
     handleLogin(event){
         var requestOptions = {
             method:'POST',
             headers:{ 'Content-Type':'application/json'},
-            body:{
+            body:JSON.stringify({
                 username:this.state.username,
                 password:this.state.password
-            }
+            })
         }
+        console.log("Body")
+        console.log(requestOptions)
         fetch(back_url+'signin', requestOptions)
         .then(response => response.json())
         .then(data => console.log(data));
@@ -48,7 +50,7 @@ class Login extends React.Component{
                         </div>                        
                     </form>
                 </div>
-                <button id="log-button"> Let me in, I own the site</button>
+                <button id="log-button" onClick={this.handleLogin}> Let me in, I own the site</button>
                 
             </div>
         )
