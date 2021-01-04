@@ -41,6 +41,9 @@ function App() {
           <Route path="/logisticMap">
             <LogisticMap />
           </Route>
+          <Route path="/login">
+            <Login />
+          </Route>
         </Switch>
       </BrowserRouter>
     </div>
