@@ -408,3 +408,29 @@ h3{
 #lm-bibliography h4{
   margin-bottom:1rem;
 }
+
+/*login*/
+#log-form form{
+  display:grid;
+  grid-template-columns: 1fr 2fr;
+  width:60%;
+  margin:auto;
+}
+
+
+#log-labels{
+  margin:1em;
+  width:15%;
+}
+#log-inputs{
+  margin:1em;
+  width:30%;
+}
+
+#log-inputs input{
+  margin-top:3px;
+}
+#log-labels label{
+  margin-top:3px;
+  margin-bottom:3px;
+}

@@ -11,6 +11,7 @@ import Education from './components/Education'
 import { Helmet } from 'react-helmet'
 import Portfolio from './components/Portfolio'
 import LogisticMap from './components/LogisticMap'
+import Login from './components/login'
 
 import WebFont from 'webfontloader'
 
@@ -40,6 +41,9 @@ function App() {
           </Route>
           <Route path="/logisticMap">
             <LogisticMap />
+          </Route>
+          <Route path="/login">
+            <Login />
           </Route>
         </Switch>
       </BrowserRouter>

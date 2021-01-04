@@ -48,7 +48,7 @@ class Login extends React.Component{
                         </div>                        
                     </form>
                 </div>
-                <button id="log-button" onChange={this.handleLogin}> Let me in, I own the site</button>
+                <button id="log-button"> Let me in, I own the site</button>
                 
             </div>
         )
