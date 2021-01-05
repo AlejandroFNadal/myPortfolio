@@ -12,7 +12,7 @@ import { Helmet } from 'react-helmet'
 import Portfolio from './components/Portfolio'
 import LogisticMap from './components/LogisticMap'
 import Login from './components/login'
-
+import Admin from './components/admin'
 import WebFont from 'webfontloader'
 
 WebFont.load({
@@ -44,6 +44,9 @@ function App() {
           </Route>
           <Route path="/login">
             <Login />
+          </Route>
+          <Route path="/admin">
+            <Admin />
           </Route>
         </Switch>
       </BrowserRouter>

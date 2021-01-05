@@ -1,4 +1,5 @@
 import React from 'react'
+import {Redirect} from "react-router-dom"
 
 var back_url = 'http://localhost:5000/'
 class Login extends React.Component{
@@ -7,7 +8,7 @@ class Login extends React.Component{
         this.state={
             username:'',
             password:'',
-            token:''
+            redirect:false
         }
         this.handleUsername=this.handleUsername.bind(this);
         this.handlePassword=this.handlePassword.bind(this);
@@ -32,11 +33,22 @@ class Login extends React.Component{
         console.log(requestOptions)
         fetch(back_url+'signin', requestOptions)
         .then(response => response.json())
-        .then(data => console.log(data));
+        .then(data => {
+            console.log(data);
+            this.setState({redirect:true});
+        });
+    }
+
+    renderRedirect = () =>{
+        if(this.state.redirect){
+            return <Redirect to='/admin' />
+        }
     }
     render(){
         return(
+            
             <div id="login">
+                {this.renderRedirect()}
                 <h2 className="title">Maintenance area. We will need to see some id, mate</h2>
                 <div id="log-form"> 
                     <form>
