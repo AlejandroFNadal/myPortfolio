@@ -45,9 +45,8 @@ function App() {
           <Route path="/login">
             <Login />
           </Route>
-          <Route path="/admin">
-            <Admin />
-          </Route>
+          <Route path="/admin" render={(props) => <Admin {...props}/>}/> {/*Necessary to pass the props*/ }
+
         </Switch>
       </BrowserRouter>
     </div>

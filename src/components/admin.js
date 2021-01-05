@@ -1,28 +1,54 @@
 import React from 'react'
-var back_url = 'http://localhost:5000/'
-class Admin extends React.Component{
-    constructor(){
-        super(props);
+import {Redirect} from 'react-router-dom'
 
-    }
-    render(){
+var back_url = 'http://localhost:5000/'
+
+class Admin extends React.Component{
+    constructor(props){
+        super(props);
+        this.state={
+            token:this.props.location.state ? this.props.location.state.token : null,
+            component:<h1>HI</h1>,
+            accepted: 'Not yet'
+        }
         var requestOptions = {
             method:'GET',
             headers:{'Content-Type':'application/json',
-                    'Authorization': 'JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmYzMzFhYWM4OTEyNzY1ZjdiYTA0ODkiLCJ1c2VybmFtZSI6ImFsZSIsInBhc3N3b3JkIjoiJDJhJDEwJFBVWnowdEk5cy9ZUnV3UExUcmhWZnVxSlR2M3ZpSFltbHREbk96Ly9QNUl2cjRaQWx5YzZPIiwiX192IjowLCJpYXQiOjE2MDk4MDIyMDh9.Fy5FQEL4idl59dOD65D16Z8l5oGTu6TUlQr1Du7rL0s'
+                    'Authorization': this.state.token
             }
         };
-        fetch(back_url+'authorize', requestOptions)
-        .then(response  => response.json())
-        .then(json => {
-            if(json.success === true)
-            {
-                console.log("We are in")
-            }
-        })
+        console.log(this.state.token)
+        if(this.state.token !== null){
+            fetch(back_url+'authorize', requestOptions)
+            .then(response  => response.json())
+            .then(json => {
+                console.log("inside admin")
+                console.log(json)
+                if(json.success === true)
+                {
+                    console.log("We are in")
+                    this.setState({component:<h1>We are in</h1>})
+                }
+                else{
+                    this.setState({component:<h1>You should not be here, you will be redirected</h1>})
+                }
+            })
+        }
+        else{
+            this.state.component=<h1>You should not be here, you will be redirected</h1>
+        }
+        
+        
+    }
+    /*checkLog = function(){
+        if(this.state.token ==)
+    }*/
+    render(){
+        
         return(
             <div>
                 <h1>Admin area. Restricted!</h1>
+                {this.state.component}
             </div>
         )
     }

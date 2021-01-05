@@ -35,13 +35,25 @@ class Login extends React.Component{
         .then(response => response.json())
         .then(data => {
             console.log(data);
-            this.setState({redirect:true});
+            if(data.success === true){
+                this.setState({redirect:true,
+                    token: data.token});
+                //this.renderRedirect();
+            }
+            else{
+                alert("Wrong user or pass")
+            }
+            
         });
     }
 
     renderRedirect = () =>{
         if(this.state.redirect){
-            return <Redirect to='/admin' />
+            return <Redirect to={{
+                pathname:'/admin', 
+                state:{token: this.state.token }
+            }}
+            />
         }
     }
     render(){
