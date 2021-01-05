@@ -1,10 +1,10 @@
 import React from 'react'
 var back_url = 'http://localhost:5000/'
 class Admin extends React.Component{
-    /*constructor(){
+    constructor(){
         super(props);
 
-    }*/
+    }
     render(){
         var requestOptions = {
             method:'GET',
