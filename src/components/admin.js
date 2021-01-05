@@ -35,7 +35,7 @@ class Admin extends React.Component{
             })
         }
         else{
-            this.state.component=<h1>You should not be here, you will be redirected</h1>
+            this.state.component=<Redirect to="/login"/>
         }
         
         
