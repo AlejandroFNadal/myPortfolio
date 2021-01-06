@@ -15,7 +15,7 @@ class Header extends React.Component {
                     <NavLink className="navlink" to="/portfolio"> Projects</NavLink>
                     <NavLink className="navlink" to="/education">Education</NavLink>
                     <NavLink className="navlink" to="#"> Blog</NavLink>
-                    <NavLink className="navlink" to="#"> Contact</NavLink>
+                    <NavLink className="navlink" to="/contact"> Contact</NavLink>
                 </div>
             </div>
 

@@ -13,6 +13,7 @@ import Portfolio from './components/Portfolio'
 import LogisticMap from './components/LogisticMap'
 import Login from './components/login'
 import Admin from './components/admin'
+import Contact from './components/contact'
 import WebFont from 'webfontloader'
 
 WebFont.load({
@@ -46,7 +47,9 @@ function App() {
             <Login />
           </Route>
           <Route path="/admin" render={(props) => <Admin {...props}/>}/> {/*Necessary to pass the props*/ }
-
+          <Route path ="/contact">
+            <Contact />
+          </Route>
         </Switch>
       </BrowserRouter>
     </div>
