@@ -454,10 +454,63 @@ h3{
 }
 
 /*Contact*/
-
+#contact-body{
+  display:flex;
+  height:90%;
+  padding: 1em;
+}
+#contact-info{
+  width:50%;
+}
 #contact ul{
   float: left;
+  margin:2em;
 }
 #contact li{
   text-align:left;
+}
+#contact-form{
+  display: flex;
+  margin-top: 2em;
+}
+#contact-form form{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 3em 3em 6em 2em;
+  justify-items: center;
+  align-items: top;
+  margin:auto;
+}
+
+#contact-form-message{
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start:3;
+  margin-left:3em;
+  width:100%;
+  height:100%;
+}
+#contact-label-1{
+  grid-row-start: 1;
+  grid-row-end:2;
+}
+#contact-label-2{
+  grid-row-start:2;
+  grid-row-end:3;
+}
+#contact-label-3{
+  grid-row-start: 3;
+}
+#contact-input-1{
+  grid-row-start:1;
+  grid-column-start: 2;
+}
+#contact-input-2{
+  grid-row-start:2;
+  grid-column-start:2;
+}
+#contact-form-send{
+  grid-row-start:5;
+  grid-column-start: 1;
+  grid-column-end:3;
 }
